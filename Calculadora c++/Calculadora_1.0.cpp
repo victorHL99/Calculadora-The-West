@@ -22,14 +22,14 @@ void Menu()
 // FUNÇÕES DE SAUDE
 //======================================================
 
-		/* Formula de saude (exceto soldado)*/
+/* Formula de saude (exceto soldado)*/
 int saudefull(int saude, int LevelPersonagem)
 {
 	int saudef;
 	saudef = (saude * 10) + (LevelPersonagem * 10) + 90;
 	return saudef;
 };
-		/*Formula de saude (soldado sem premium)*/
+/*Formula de saude (soldado sem premium)*/
 int saude_Soldado(int saude, int LevelPersonagem)
 {
 	int saudeS;
@@ -37,7 +37,7 @@ int saude_Soldado(int saude, int LevelPersonagem)
 
 	return saudeS;
 };
-		/*Formula de saude (soldado com premium)*/
+/*Formula de saude (soldado com premium)*/
 int saude_SoldadoP(int saude, int LevelPersonagem)
 {
 	int saudeP;
@@ -50,11 +50,12 @@ int saude_SoldadoP(int saude, int LevelPersonagem)
 //FUNCOES DE DANO
 //======================================================
 
-		/*FUNÇÃO DE DANO MINIMO*/
+/*FUNÇÃO DE DANO MINIMO*/
 float dano_Minimo(int danoMinimo, int lideranca, int saude, int LevelPersonagem, int danobonus)
 {
-	/*formula dano*/
-	/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
+
+/*formula dano*/
+/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
 	int x;
 	float danoarma;
 	x = saudefull(saude, LevelPersonagem);
@@ -62,11 +63,12 @@ float dano_Minimo(int danoMinimo, int lideranca, int saude, int LevelPersonagem,
 	return danoarma;
 };
 
-		/*FUNÇÃO DE DANO MAXIMO*/
+/*FUNÇÃO DE DANO MAXIMO*/
 float dano_Maximo(int danoMaximo, int lideranca, int saude, int LevelPersonagem, int danobonus)
 {
-	/*formula dano*/
-	/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
+
+/*formula dano*/
+/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
 	int x;
 	float danoarma;
 	x = saudefull(saude, LevelPersonagem);
@@ -74,11 +76,11 @@ float dano_Maximo(int danoMaximo, int lideranca, int saude, int LevelPersonagem,
 	return danoarma;
 };
 
-		/*FUNÇÃO DE DANO MEDIO */
+/*FUNÇÃO DE DANO MEDIO */
 float dano_Medio(int danoMinimo, int danoMaximo, int lideranca, int saude, int LevelPersonagem, int danobonus)
 {
-	/*formula dano*/
-	/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
+/*formula dano*/
+/*Dano da Arma + Danos Setor + [(Dano da Arma + Danos Setor) � Lideran�a � MaxHP]*/
 	int x;
 	float danomedioarma, danoarma;
 	x = saudefull(saude, LevelPersonagem);
@@ -87,9 +89,9 @@ float dano_Medio(int danoMinimo, int danoMaximo, int lideranca, int saude, int L
 	return danoarma;
 };
 
-		/*FUNÇÕES DE DANO SOLDADO*/
+/*FUNÇÕES DE DANO SOLDADO*/
 
-		//Premium
+//Premium
 float dano_Minimo_Soldado_Premium(int danoMinimo, int lideranca, int saude, int levelPersonagem, int danobonus)
 {
 	int x;
@@ -119,7 +121,7 @@ float dano_Medio_Soldado_Premium(int danoMinimo, int danoMaximo, int lideranca, 
 	return danoarma;
 }
 
-		//Sem Premium
+//Sem Premium
 float dano_Minimo_Soldado(int danoMinimo, int lideranca, int saude, int levelPersonagem, int danobonus)
 {
 	int x;
@@ -153,10 +155,10 @@ float dano_Medio_Soldado(int danoMinimo, int danoMaximo, int lideranca, int saud
 // FUNÇÕES DE RESISTENCIA
 //======================================================
 
-		// FUNÇAO RESISTENCIA ATAQUE
+// FUNÇAO RESISTENCIA ATAQUE
 float resistAtaque(int esconder, int saude, int LevelPersonagem, int resistencia)
 {
-	/*300 � (habilidade esconder ou habilidade colocar armadilhas) � Hp total + bonus de roupas em resistencia para batalha de forte(n�o a habilidade resistencia)*/
+/*300 � (habilidade esconder ou habilidade colocar armadilhas) � Hp total + bonus de roupas em resistencia para batalha de forte(n�o a habilidade resistencia)*/
 	int x;
 	float Resi;
 	x = saudefull(saude, LevelPersonagem);
@@ -166,10 +168,10 @@ float resistAtaque(int esconder, int saude, int LevelPersonagem, int resistencia
 	return Resi;
 };
 
-		// FUNÇÃO RESISTENCIA DEFESA
+// FUNÇÃO RESISTENCIA DEFESA
 float resistDefesa(int armadilha, int saude, int LevelPersonagem, int resistencia)
 {
-	/*300 � (habilidade esconder ou habilidade colocar armadilhas) � Hp total + bonus de roupas em resistencia para batalha de forte(n�o a habilidade resistencia)*/
+/*300 � (habilidade esconder ou habilidade colocar armadilhas) � Hp total + bonus de roupas em resistencia para batalha de forte(n�o a habilidade resistencia)*/
 	int x;
 	float Resi;
 	x = saudefull(saude, LevelPersonagem);
@@ -183,7 +185,7 @@ float resistDefesa(int armadilha, int saude, int LevelPersonagem, int resistenci
 // FUNÇÕES DE ACERTO
 //======================================================
 
-		// ACERTO PADRAO AVENT E PISTOL ATAQUE
+// ACERTO PADRAO AVENT E PISTOL ATAQUE
 float valorAtaqueAA(int lideranca, int mira, int esconder, int acertobonus)
 {
 	float Avalorataque;
@@ -195,7 +197,7 @@ float valorAtaqueAA(int lideranca, int mira, int esconder, int acertobonus)
 	return Avalorataque;
 };
 
-		// ACERTO PADRAO AVENT E PISTOL DEFESA
+// ACERTO PADRAO AVENT E PISTOL DEFESA
 float valorAtaqueDD(int lideranca, int mira, int armadilha, int acertobonus)
 {
 
@@ -208,7 +210,7 @@ float valorAtaqueDD(int lideranca, int mira, int armadilha, int acertobonus)
 	return Dvalorataque;
 }
 
-		// ACERTO PADRAO SOLDADO (Sem premium) ATAQUE
+// ACERTO PADRAO SOLDADO (Sem premium) ATAQUE
 float valorAtaqueAASOLS(int lideranca, int mira, int esconder, int acertobonus)
 {
 	float Avalorataque;
@@ -220,7 +222,7 @@ float valorAtaqueAASOLS(int lideranca, int mira, int esconder, int acertobonus)
 	return Avalorataque;
 };
 
-		// ACERTO PADRAO SOLDADO (com premium) ATAQUE
+// ACERTO PADRAO SOLDADO (com premium) ATAQUE
 float valorAtaqueAASOLP(int lideranca, int mira, int esconder, int acertobonus)
 {
 	float Avalorataque;
@@ -232,7 +234,7 @@ float valorAtaqueAASOLP(int lideranca, int mira, int esconder, int acertobonus)
 	return Avalorataque;
 };
 
-		// ACERTO PADRAO SOLDADO (SEM PREMIUM) DEFESA
+// ACERTO PADRAO SOLDADO (SEM PREMIUM) DEFESA
 float valorAtaqueDDSOLS(int lideranca, int mira, int armadilha, int acertobonus)
 {
 	float Dvalorataque;
@@ -244,7 +246,7 @@ float valorAtaqueDDSOLS(int lideranca, int mira, int armadilha, int acertobonus)
 	return Dvalorataque;
 }
 
-		// ACERTO PADRAO SOLDADO (COM PREMIUM) DEFESA
+// ACERTO PADRAO SOLDADO (COM PREMIUM) DEFESA
 float valorAtaqueDDSOLP(int lideranca, int mira, int armadilha, int acertobonus)
 {
 	float Dvalorataque;
@@ -256,7 +258,7 @@ float valorAtaqueDDSOLP(int lideranca, int mira, int armadilha, int acertobonus)
 	return Dvalorataque;
 }
 
-		// ACERTO PADRAO WORK (SEM PREMIUM) ATAQUE
+// ACERTO PADRAO WORK (SEM PREMIUM) ATAQUE
 float valorAtaqueAAWS(int lideranca, int mira, int esconder, int acertobonus)
 {
 	float Avalorataque;
@@ -267,7 +269,7 @@ float valorAtaqueAAWS(int lideranca, int mira, int esconder, int acertobonus)
 	return Avalorataque;
 }
 
-		// ACERTO PADRAO WORK (COM PREMIUM) ATAQUE
+// ACERTO PADRAO WORK (COM PREMIUM) ATAQUE
 float valorAtaqueAAWP(int lideranca, int mira, int esconder, int acertobonus)
 {
 	float Avalorataque;
@@ -278,7 +280,7 @@ float valorAtaqueAAWP(int lideranca, int mira, int esconder, int acertobonus)
 	return Avalorataque;
 }
 
-		// ACERTO PADRAO WORK (SEM PREMIUM) DEFESA
+// ACERTO PADRAO WORK (SEM PREMIUM) DEFESA
 float valorAtaqueDDWS(int lideranca, int mira, int armadilha, int acertobonus)
 {
 	float Dvalorataque;
@@ -289,7 +291,7 @@ float valorAtaqueDDWS(int lideranca, int mira, int armadilha, int acertobonus)
 	return Dvalorataque;
 }
 
-		// ACERTO PADRAO WORK (COM PREMIUM) DEFESA
+// ACERTO PADRAO WORK (COM PREMIUM) DEFESA
 float valorAtaqueDDWP(int lideranca, int mira, int armadilha, int acertobonus)
 {
 	float Dvalorataque;
@@ -304,7 +306,7 @@ float valorAtaqueDDWP(int lideranca, int mira, int armadilha, int acertobonus)
 // FUNCOES DE DESVIO
 //======================================================
 
-		// DESVIO PADRAO AVENT E PISTOL ATAQUE
+// DESVIO PADRAO AVENT E PISTOL ATAQUE
 float valorDefesaAA(int lideranca, int esconder, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -315,7 +317,7 @@ float valorDefesaAA(int lideranca, int esconder, int evasao, int desviobonus)
 	return DvalorDefesa;
 };
 
-		// DESVIO PADRAO AVENT E PISTOL Defesa
+// DESVIO PADRAO AVENT E PISTOL Defesa
 float valorDefesaDD(int lideranca, int armadilha, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -326,7 +328,7 @@ float valorDefesaDD(int lideranca, int armadilha, int evasao, int desviobonus)
 	return DvalorDefesa;
 };
 
-		// DESVIO PADRAO SOLDADO (Sem premium) ATAQUE
+// DESVIO PADRAO SOLDADO (Sem premium) ATAQUE
 float valorDefesaAASOLS(int lideranca, int esconder, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -338,7 +340,7 @@ float valorDefesaAASOLS(int lideranca, int esconder, int evasao, int desviobonus
 	return DvalorDefesa;
 };
 
-		// DESVIO PADRAO SOLDADO (com premium) ATAQUE
+// DESVIO PADRAO SOLDADO (com premium) ATAQUE
 float valorDefesaAASOLP(int lideranca, int esconder, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -350,7 +352,7 @@ float valorDefesaAASOLP(int lideranca, int esconder, int evasao, int desviobonus
 	return DvalorDefesa;
 };
 
-		// DESVIO PADRAO SOLDADO (SEM PREMIUM) DEFESA
+// DESVIO PADRAO SOLDADO (SEM PREMIUM) DEFESA
 float valorDefesaDDSOLS(int lideranca, int armadilha, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -361,7 +363,7 @@ float valorDefesaDDSOLS(int lideranca, int armadilha, int evasao, int desviobonu
 	return DvalorDefesa;
 }
 
-		// DESVIO PADRAO SOLDADO (COM PREMIUM) DEFESA
+// DESVIO PADRAO SOLDADO (COM PREMIUM) DEFESA
 float valorDefesaDDSOLP(int lideranca, int armadilha, int evasao, int desviobonus)
 {
 	float DvalorDefesa;
@@ -372,7 +374,7 @@ float valorDefesaDDSOLP(int lideranca, int armadilha, int evasao, int desviobonu
 	return DvalorDefesa;
 }
 
-		// DESVIO PADRAO WORK (SEM PREMIUM) ATAQUE
+// DESVIO PADRAO WORK (SEM PREMIUM) ATAQUE
 float valorDefesaAAWS(int lideranca, int evasao, int esconder, int desviobonus)
 {
 	float DvalorDefesa;
@@ -383,7 +385,7 @@ float valorDefesaAAWS(int lideranca, int evasao, int esconder, int desviobonus)
 	return DvalorDefesa;
 }
 
-		// DESVIO PADRAO WORK (COM PREMIUM) ATAQUE
+// DESVIO PADRAO WORK (COM PREMIUM) ATAQUE
 float valorDefesaAAWP(int lideranca, int evasao, int esconder, int desviobonus)
 {
 	float DvalorDefesa;
@@ -394,7 +396,7 @@ float valorDefesaAAWP(int lideranca, int evasao, int esconder, int desviobonus)
 	return DvalorDefesa;
 }
 
-		// DESVIO PADRAO WORK (SEM PREMIUM) DEFESA
+// DESVIO PADRAO WORK (SEM PREMIUM) DEFESA
 float valorDefesaDDWS(int lideranca, int evasao, int armadilha, int desviobonus)
 {
 	float DvalorDefesa;
@@ -405,7 +407,7 @@ float valorDefesaDDWS(int lideranca, int evasao, int armadilha, int desviobonus)
 	return DvalorDefesa;
 }
 
-		// DESVIO PADRAO WORK (COM PREMIUM) DEFESA
+// DESVIO PADRAO WORK (COM PREMIUM) DEFESA
 float valorDefesaDDWP(int lideranca, int evasao, int armadilha, int desviobonus)
 {
 	float DvalorDefesa;
