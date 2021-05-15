@@ -1,2 +1,4 @@
 # Calculadora The West
- Calculadora de habilidades para batalhas no forte.
+
+ Calculadora de Batalhas no Forte do THE WEST.
+ Projeto com o intuito de melhorar a mudança e visualização de mudanças em build.
