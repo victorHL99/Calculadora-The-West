@@ -578,7 +578,10 @@ void fclasse(int danoMinimo, int danoMaximo, int danobonus, int acertobonus, int
 
 		}
 	
-		if((premium == "NAO") || (premium == "Nao") || (premium == "nao"))
+		else if((premium == "NAO") || (premium == "Nao") || (premium == "nao"))
+		{
+
+		}
 	
 	}
 	// caso for pistol
